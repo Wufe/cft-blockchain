@@ -1,8 +1,8 @@
-# References
+## References
 
 <div class="r-stack">
     <div class="bg w-100" style="min-height: 50vh">
-        <p class="text-lg">Whitepapers, Essays</p>
+        <p class="text-normal">Whitepapers, Essays</p>
         <div class="grid text-xxs" style="grid-template-columns: 1fr 1fr">
             <div>
                 <a target="_blank" href="https://nakamotoinstitute.org/static/docs/computer-systems-by-mutually-suspicious-groups.pdf">

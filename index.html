@@ -9,6 +9,8 @@
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
 		<link rel="stylesheet" href="dist/theme/black.css">
+		<link rel="stylesheet" href="css/transaction.css">
+		<link rel="stylesheet" href="css/baloon.css">
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
@@ -66,8 +68,10 @@
 			.backgrounds:before, .slides>.pdf-page:before {
 				content: 'https://github.com/wufe/cft-blockchain';
 				position: absolute;
-				width: 100%;
-				height: 100%;
+				left: 0;
+				top: 0;
+				right: 0;
+				bottom: 0;
 				pointer-events: none;
 
 				background-image: url("data:image/svg+xml,%0A%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 31 41'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.926 23.083c.05.038.101.074.156.105l.368.21 8.159 4.665a1.3 1.3 0 0 0 .196.091v11.889a1.407 1.407 0 0 1-.192-.09l-8.527-4.876a1.355 1.355 0 0 1-.685-1.176v-9.749c0-.42.196-.814.525-1.069Zm18.74-.002c.332.255.53.649.53 1.072v9.75c0 .485-.261.934-.686 1.176l-8.526 4.887c-.049.028-.099.053-.15.075V28.136c.05-.021.099-.046.146-.073l8.526-4.875c.057-.032.11-.068.16-.107ZM20.835 6.079c.05.021.099.046.146.073l8.526 4.892c.425.244.686.693.686 1.18v9.784a1.36 1.36 0 0 1-.506 1.057l-.02.016a1.32 1.32 0 0 0-.156-.105l-8.526-4.892a1.377 1.377 0 0 0-1.18-.091l-.028.01c-.056.023-.11.05-.164.08l-8.526 4.893a1.38 1.38 0 0 0-.151.1l-.01.006a1.359 1.359 0 0 1-.515-.885l.01-.006c.056-.023.111-.05.164-.08l8.526-4.892c.053-.03.104-.064.151-.1l.026-.02a1.356 1.356 0 0 0 .509-1.06V6.255c0-.063-.005-.126-.013-.187l.022-.009a1.38 1.38 0 0 1 1.029.02ZM.017 6.043l1.022.587 9.375 5.378c-.011.07-.018.143-.017.216v9.783c0 .064.004.127.013.188-.388.155-.83.127-1.198-.084L.686 17.22A1.36 1.36 0 0 1 0 16.039V6.255c0-.072.006-.143.017-.212ZM10.584.183l8.526 4.892c.37.212.615.58.673.993a1.35 1.35 0 0 0-.175.084l-8.526 4.892a1.412 1.412 0 0 0-.136.089L1.055 5.458l-.509-.292c.044-.033.091-.064.14-.092L9.212.183a1.38 1.38 0 0 1 1.372 0Z' fill='%23656565'/%3E%3C/svg%3E%0A");
@@ -84,6 +88,8 @@
 				padding-bottom: 3%;
 				font-size: 3vmin;
 				color: rgba(255, 255, 255, .4);
+
+				z-index: 9999;
 			}
 
 			.slides>.pdf-page:before {
@@ -140,8 +146,12 @@
 
 			.grid {
 				display: grid;
-				grid-gap: 5vmin;
-				margin-top: 5vmin
+				grid-gap: 3vmin;
+				margin-top: 3vmin
+			}
+
+			* {
+				box-sizing: border-box;
 			}
 		</style>
 	</head>
@@ -152,6 +162,12 @@
 				<section data-markdown="slides/2.md"></section>
 				<section data-markdown="slides/3.md"></section>
 				<section data-markdown="slides/4.md"></section>
+				<section data-markdown="slides/5.md"></section>
+				<section data-markdown="slides/6.md"></section>
+
+				<section>
+					<div id="test-app">test-app</div>
+				</section>
 
 				<section data-markdown="slides/references.md"></section>
 			</div>
@@ -162,6 +178,8 @@
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
 		<script src="plugin/math/math.js"></script>
+		<script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+		<script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
 		<script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
