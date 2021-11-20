@@ -21,6 +21,16 @@
     border-color: coral;
 }
 
+.transaction.--in-block {
+    font-size: .8em;
+    padding-top: 1.5em !important;
+}
+
+.transaction.--mock .mock-content {
+    grid-area: 1 / 1 / 1 / 4;
+    border: none;
+}
+
 .transaction>div>*:first-child {
     padding: .2em;
 }
@@ -59,10 +69,42 @@
     padding: .2em .4em;
     font-size: .7em;
 }
-.transaction.--uuid>.signature {
-    grid-area: 2 / 1 / 2 / 5;
+
+.transaction>.signature {
     padding: .2em .4em;
     font-size: .7em;
+}
+
+.transaction>.signature {
+    grid-area: 3 / 1 / 3 / 4;
+}
+.transaction.--uuid>.signature {
+    grid-area: 2 / 1 / 2 / 5;
+}
+
+.transaction.--nonce>.nonce {
+    user-select: none;
+}
+
+.transaction.--hash>.hash {
+    grid-area: 1 / 2 / 1 / 4;
+}
+
+.transaction.--uuid.--hash>.hash {
+    grid-area: 3 / 2 / 3 / 5;
+}
+
+.transaction.--hash>.hash {
+    user-select: none;
+    cursor: pointer;
+}
+
+.transaction.--hash>.hash>div:nth-child(2) {
+    max-width: 330px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
 }
 
 .transaction .sender {}

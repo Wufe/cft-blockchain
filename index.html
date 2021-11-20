@@ -65,7 +65,7 @@
 				display: none;
 			}
 
-			.backgrounds:before, .slides>.pdf-page:before {
+			.slides>.pdf-page:before, .reveal.slide.ready:before {
 				content: 'https://github.com/wufe/cft-blockchain';
 				position: absolute;
 				left: 0;
@@ -153,6 +153,14 @@
 			* {
 				box-sizing: border-box;
 			}
+
+			.ellipsis {
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				max-width: 100%;
+				min-width: 0;
+			}
 		</style>
 	</head>
 	<body>
@@ -180,6 +188,9 @@
 		<script src="plugin/math/math.js"></script>
 		<script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
 		<script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+			integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+		<script src="js/transaction.js"></script>
 		<script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
