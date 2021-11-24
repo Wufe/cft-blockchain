@@ -161,6 +161,56 @@
 				max-width: 100%;
 				min-width: 0;
 			}
+
+			.flex-center {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+		</style>
+
+		<style>
+			.grid-1 {
+				display: grid;
+				grid-template-columns: 1fr;
+				justify-content: center;
+			}
+		
+			.grid-2 {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				justify-content: center;
+				align-items: center;
+			}
+		
+			.grid-7 {
+				display: grid;
+				grid-template-columns: 50px repeat(5, 250px) 50px;
+				grid-row-gap: 30px;
+				justify-content: center;
+				align-items: center;
+				position: relative;
+		
+			}
+		
+			.grid-7>div {
+				min-width: 180px;
+				position: relative;
+			}
+		
+			.grid-7>div>div {
+				position: absolute;
+				bottom: -30px;
+				left: 0;
+				right: 0;
+				display: flex;
+				justify-content: center;
+			}
+		
+			.grid-7>div>div>h3 {
+				white-space: nowrap;
+				text-align: center;
+			}
 		</style>
 	</head>
 	<body>
@@ -173,10 +223,17 @@
 				<section data-markdown="slides/5.md"></section>
 				<section data-markdown="slides/6.md"></section>
 				<section data-markdown="slides/7.md"></section>
-
-				<section>
-					<div id="test-app">test-app</div>
-				</section>
+				<section data-markdown="slides/8.md"></section>
+				<section data-markdown="slides/9.md"></section>
+				<section data-markdown="slides/10.md"></section>
+				<section data-markdown="slides/11.md"></section>
+				<section data-markdown="slides/12.md"></section>
+				<section data-markdown="slides/13.md"></section>
+				<section data-markdown="slides/14.md"></section>
+				<section data-markdown="slides/15.md"></section>
+				<section data-markdown="slides/16.md"></section>
+				<section data-markdown="slides/17.md"></section>
+				<section data-markdown="slides/18.md"></section>
 
 				<section data-markdown="slides/references.md"></section>
 			</div>
