@@ -79,7 +79,7 @@
 				background-position: 95% 95%;
 				background-size: auto 10vmin;
 
-				opacity: .3;
+				opacity: .6;
 				display: flex;
 				flex-direction: column-reverse;
 				justify-content: flex-start;
@@ -90,6 +90,15 @@
 				color: rgba(255, 255, 255, .4);
 
 				z-index: 9999;
+			}
+
+			#particles {
+				position: absolute;
+				left: 0;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				pointer-events: none;
 			}
 
 			.slides>.pdf-page:before {
@@ -214,6 +223,7 @@
 		</style>
 	</head>
 	<body>
+		<div id="particles"></div>
 		<div class="reveal">
 			<div class="slides">
 				<section data-markdown="slides/1.md"></section>
@@ -234,6 +244,7 @@
 				<section data-markdown="slides/16.md"></section>
 				<section data-markdown="slides/17.md"></section>
 				<section data-markdown="slides/18.md"></section>
+				<section data-markdown="slides/19.md"></section>
 
 				<section data-markdown="slides/references.md"></section>
 			</div>
@@ -249,6 +260,7 @@
 		<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
 			integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
 		<script src="js/transaction.js"></script>
+		<script src="js/particles.min.js"></script>
 		<script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
@@ -261,6 +273,10 @@
 
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ]
+			});
+
+			particlesJS.load('particles', 'assets/particlesjs-config.json', function () {
+					console.log('callback - particles.js config loaded');
 			});
 		</script>
 	</body>
